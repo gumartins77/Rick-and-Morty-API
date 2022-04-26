@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const CharacterSchema = new mongoose.Schema({
   name: {
-    type: 'string',
+    type: String,
     require: true,
   },
   image: {
