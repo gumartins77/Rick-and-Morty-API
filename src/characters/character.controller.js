@@ -1,4 +1,4 @@
-const charactersService = require('../services/character.service');
+const charactersService = require('./character.service');
 const mongoose = require('mongoose');
 
 const findAllCharactersController = async (req, res) => {
@@ -6,7 +6,7 @@ const findAllCharactersController = async (req, res) => {
   if (allCharacters.length == 0) {
     return res
       .status(404)
-      .send({ message: 'There is no registered character!' });
+      .send({ message: 'Não há personagens registrados!' });
   }
   res.send(allCharacters);
 };
@@ -16,7 +16,7 @@ const findByIdCharactersController = async (req, res) => {
     req.params.id,
   );
   if (!chosenCharacter) {
-    return res.status(404).send({ message: 'Character not found!' });
+    return res.status(404).send({ message: 'Personagem não encontrado!' });
   }
   res.send(chosenCharacter);
 };
@@ -25,7 +25,7 @@ const createCharacterController = async (req, res) => {
   const createCharacter = await charactersService.createCharacterService(
     req.body,
   );
-  res.status(201).send({ message: 'Character created successfully!' });
+  res.status(201).send({ message: 'Personagem criado com sucesso!' });
 };
 
 const updateCharacterController = async (req, res) => {
@@ -33,14 +33,14 @@ const updateCharacterController = async (req, res) => {
     req.params.id,
     req.body,
   );
-  res.send({ message: 'Character successfully updated!' });
+  res.send({ message: 'Personagem atualizado com sucesso!' });
 };
 
 const deleteCharacterController = async (req, res) => {
   const deleteCharacter = await charactersService.deleteCharacterService(
     req.params.id,
   );
-  res.send({ message: 'Character successfully deleted!' });
+  res.send({ message: 'Personagem deletado com sucesso!' });
 };
 
 module.exports = {

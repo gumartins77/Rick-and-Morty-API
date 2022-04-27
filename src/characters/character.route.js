@@ -1,30 +1,27 @@
 const route = require('express').Router();
-const controllerCharacters = require('../controllers/character.controller');
-const {
-  validId,
-  validObjectBody,
-} = require('../middlewares/character.middleware');
+const controllerCharacters = require('./character.controller');
+const { validId, validObjectBody } = require('./character.middleware');
 
-route.get('/characters', controllerCharacters.findAllCharactersController);
+route.get('/', controllerCharacters.findAllCharactersController);
 route.get(
-  '/characters/find/:id',
+  '/find/:id',
   validId,
   controllerCharacters.findByIdCharactersController,
 );
 route.post(
-  '/characters/create',
+  '/create',
   validObjectBody,
   controllerCharacters.createCharacterController,
 );
 route.put(
-  '/characters/update/:id',
+  '/update/:id',
   validId,
   validObjectBody,
   controllerCharacters.updateCharacterController,
 );
 
 route.delete(
-  '/characters/delete/:id',
+  '/delete/:id',
   validId,
   controllerCharacters.deleteCharacterController,
 );
