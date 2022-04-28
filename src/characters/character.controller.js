@@ -25,7 +25,7 @@ const createCharacterController = async (req, res) => {
   const createCharacter = await charactersService.createCharacterService(
     req.body,
   );
-  res.status(201).send({ message: 'Personagem criado com sucesso!' });
+  res.status(201).send(createCharacter);
 };
 
 const updateCharacterController = async (req, res) => {
@@ -33,7 +33,7 @@ const updateCharacterController = async (req, res) => {
     req.params.id,
     req.body,
   );
-  res.send({ message: 'Personagem atualizado com sucesso!' });
+  res.send(updateCharacter);
 };
 
 const deleteCharacterController = async (req, res) => {

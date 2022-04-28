@@ -12,6 +12,7 @@ connectToDatabase();
 
 app.use(express.json());
 app.use(cors());
+app.options('*', cors());
 
 app.use('/characters', characterRoute);
 app.use('/users', userRoute);
