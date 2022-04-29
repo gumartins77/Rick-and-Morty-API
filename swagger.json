@@ -16,7 +16,7 @@
     },
     {
       "url": "https://rick-and-morty-api.onrender.com/",
-      "description": "API de personagens de Rick and Morty"
+      "description": "API de personagens de Rick and Morty online no Render"
     }
   ],
   "paths": {
@@ -34,8 +34,11 @@
               "examples": {
                 "users": {
                   "value": {
-                    "email": "testcreate@user.com",
-                    "password": "12345"
+                    "name": "Test CreateUser",
+                    "username": "TestCreateUser",
+                    "email": "TestUser@create.com",
+                    "password": "12345",
+                    "avatar": "TestCreateUser.jpg"
                   }
                 }
               }
@@ -99,8 +102,8 @@
               "examples": {
                 "users": {
                   "value": {
-                    "email": "Test2@create.com",
-                    "password": "Test_Create2"
+                    "email": "TestUser@create.com",
+                    "password": "12345"
                   }
                 }
               }
@@ -195,8 +198,8 @@
               "examples": {
                 "Characters": {
                   "value": {
-                    "name": "Test Create",
-                    "image": "Test Create"
+                    "name": "Rick D. Sanchez III",
+                    "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/283.jpeg"
                   }
                 }
               }
@@ -241,10 +244,10 @@
                 "$ref": "#/components/schemas/Characters"
               },
               "examples": {
-                "Paletas": {
+                "Characters": {
                   "value": {
-                    "name": "Test Update",
-                    "image": "Test Update"
+                    "name": "Rick Prime",
+                    "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/285.jpeg"
                   }
                 }
               }
