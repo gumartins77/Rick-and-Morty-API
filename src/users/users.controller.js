@@ -30,7 +30,7 @@ const createUserController = async (req, res) => {
     });
   }
 
-  const token = loginService.generateToken(user.id);
+  const token = await loginService.generateToken(user.id);
 
   res.status(201).send({
     user: {

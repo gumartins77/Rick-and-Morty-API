@@ -5,7 +5,7 @@
     "description": "API para CRUD de personagens da serie animda Rick and Morty / Desenvolvido por Tainá Vilela e Gustavo Martins.",
     "termsOfService": "",
     "contact": {
-      "email": "gugumartin77@gmail.com and tainadantas89@gmail.com"
+      "email": "gugumartin77@gmail.com e tainadantas89@gmail.com"
     },
     "version": "1.0.0"
   },
@@ -29,7 +29,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "type": "object"
               },
               "examples": {
                 "User": {
@@ -54,8 +54,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/User"
+                  "type": "object"
                 }
               }
             }
@@ -79,7 +78,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/User"
+                    "type": "object"
                   }
                 }
               }
@@ -97,7 +96,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "type": "object"
               },
               "examples": {
                 "User": {
@@ -136,7 +135,6 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Character"
                   }
                 }
               }
@@ -167,8 +165,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/Character"
+                  "type": "object"
                 }
               }
             }
@@ -185,7 +182,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Character"
+                "type": "object"
               },
               "examples": {
                 "Character": {
@@ -207,8 +204,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/Characters"
+                  "type": "object"
                 }
               }
             }
@@ -233,7 +229,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Character"
+                "type": "object"
               },
               "examples": {
                 "Character": {
@@ -255,8 +251,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/Character"
+                  "type": "object"
                 }
               }
             }
