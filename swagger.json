@@ -2,10 +2,10 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Rick-and-Morty-API",
-    "description": "API para CRUD de personagens da serie animda Rick and Morty / Desenvolvido por Tainá Vilela e Gustavo Martins.",
+    "description": "API com Create, Login de User e CRUD de personagens da série animada Rick and Morty / Desenvolvido por Tainá Vilela e Gustavo Martins.",
     "termsOfService": "",
     "contact": {
-      "email": "gugumartin77@gmail.com and tainadantas89@gmail.com"
+      "email": "gugumartin77@gmail.com e tainadantas89@gmail.com"
     },
     "version": "1.0.0"
   },
@@ -23,16 +23,16 @@
     "/users/create": {
       "post": {
         "summary": "Cadastrar um usuário",
-        "description": "Rota responsável por cadastrar um novo usuário no site",
+        "description": "Rota responsável por cadastrar um novo usuário no site.",
         "tags": ["Users"],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/users"
+                "$ref": "#/components/schemas/User"
               },
               "examples": {
-                "users": {
+                "User": {
                   "value": {
                     "name": "Test CreateUser",
                     "username": "TestCreateUser",
@@ -55,7 +55,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/users"
+                  "$ref": "#/components/schemas/User"
                 }
               }
             }
@@ -66,7 +66,7 @@
     "/users/": {
       "get": {
         "summary": "Lista de todas os usuários",
-        "description": "Rota responsável por listar todas os usuários cadastrados no site",
+        "description": "Rota responsável por listar todas os usuários cadastrados no site.",
         "tags": ["Users"],
         "responses": {
           "404": {
@@ -79,7 +79,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/users"
+                    "$ref": "#/components/schemas/User"
                   }
                 }
               }
@@ -91,16 +91,16 @@
     "/auth/login": {
       "post": {
         "summary": "Fazer o login de um usuário",
-        "description": "Rota responsável fazer e autenticar o login do usuário no site",
+        "description": "Rota responsável fazer e autenticar o login do usuário no site.",
         "tags": ["Auth"],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/users"
+                "$ref": "#/components/schemas/User"
               },
               "examples": {
-                "users": {
+                "User": {
                   "value": {
                     "email": "TestUser@create.com",
                     "password": "12345"
@@ -115,15 +115,7 @@
             "description": "Bad Request"
           },
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/users"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -131,7 +123,7 @@
     "/characters/": {
       "get": {
         "summary": "Lista de todas os personagens",
-        "description": "Rota responsável por listar todas os personagens",
+        "description": "Rota responsável por listar todas os personagens.",
         "tags": ["Characters"],
         "responses": {
           "404": {
@@ -144,7 +136,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Characters"
+                    "$ref": "#/components/schemas/Character"
                   }
                 }
               }
@@ -155,8 +147,8 @@
     },
     "/characters/find/{id}": {
       "get": {
-        "summary": "Busca um personagem pelo ID",
-        "description": "Rota responsável por buscar um personagem pelo ID",
+        "summary": "Buscar um personagem pelo ID",
+        "description": "Rota responsável por buscar um personagem pelo ID.",
         "tags": ["Characters"],
         "parameters": [
           {
@@ -176,7 +168,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/Characters"
+                  "$ref": "#/components/schemas/Character"
                 }
               }
             }
@@ -186,17 +178,17 @@
     },
     "/characters/create": {
       "post": {
-        "summary": "Cadastrar um personagem",
-        "description": "Rota responsável por cadastrar um personagem",
+        "summary": "Cadastrar um novo personagem",
+        "description": "Rota responsável por cadastrar um novo personagem na lista de personagens.",
         "tags": ["Characters"],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Characters"
+                "$ref": "#/components/schemas/Character"
               },
               "examples": {
-                "Characters": {
+                "Character": {
                   "value": {
                     "name": "Rick D. Sanchez III",
                     "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/283.jpeg"
@@ -216,7 +208,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/Characters"
+                  "$ref": "#/components/schemas/Character"
                 }
               }
             }
@@ -227,7 +219,7 @@
     "/characters/update/{id}": {
       "put": {
         "summary": "Editar um personagem pelo ID",
-        "description": "Rota responsável por editar um personagem pelo ID",
+        "description": "Rota responsável por editar um personagem pelo ID.",
         "tags": ["Characters"],
         "parameters": [
           {
@@ -241,10 +233,10 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Characters"
+                "$ref": "#/components/schemas/Character"
               },
               "examples": {
-                "Characters": {
+                "Character": {
                   "value": {
                     "name": "Rick Prime",
                     "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/285.jpeg"
@@ -264,7 +256,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/Characters"
+                  "$ref": "#/components/schemas/Character"
                 }
               }
             }
@@ -275,7 +267,7 @@
     "/characters/delete/{id}": {
       "delete": {
         "summary": "Apagar um personagem pelo ID",
-        "description": "Rota responsável por apagar um personagem pelo ID",
+        "description": "Rota responsável por apagar um personagem pelo ID.",
         "tags": ["Characters"],
         "parameters": [
           {
