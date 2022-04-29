@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Rick-and-Morty-API",
-    "description": "API para CRUD de personagens da serie animda Rick and Morty / Desenvolvido por Tainá Vilela e Gustavo Martins.",
+    "description": "API com Create, Login de User e CRUD de personagens da série animada Rick and Morty / Desenvolvido por Tainá Vilela e Gustavo Martins.",
     "termsOfService": "",
     "contact": {
       "email": "gugumartin77@gmail.com e tainadantas89@gmail.com"
@@ -23,7 +23,7 @@
     "/users/create": {
       "post": {
         "summary": "Cadastrar um usuário",
-        "description": "Rota responsável por cadastrar um novo usuário no site",
+        "description": "Rota responsável por cadastrar um novo usuário no site.",
         "tags": ["Users"],
         "requestBody": {
           "content": {
@@ -65,7 +65,7 @@
     "/users/": {
       "get": {
         "summary": "Lista de todas os usuários",
-        "description": "Rota responsável por listar todas os usuários cadastrados no site",
+        "description": "Rota responsável por listar todas os usuários cadastrados no site.",
         "tags": ["Users"],
         "responses": {
           "404": {
@@ -90,7 +90,7 @@
     "/auth/login": {
       "post": {
         "summary": "Fazer o login de um usuário",
-        "description": "Rota responsável fazer e autenticar o login do usuário no site",
+        "description": "Rota responsável fazer e autenticar o login do usuário no site.",
         "tags": ["Auth"],
         "requestBody": {
           "content": {
@@ -122,7 +122,7 @@
     "/characters/": {
       "get": {
         "summary": "Lista de todas os personagens",
-        "description": "Rota responsável por listar todas os personagens",
+        "description": "Rota responsável por listar todas os personagens.",
         "tags": ["Characters"],
         "responses": {
           "404": {
@@ -135,6 +135,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
+                    "type": "object"
                   }
                 }
               }
@@ -145,8 +146,8 @@
     },
     "/characters/find/{id}": {
       "get": {
-        "summary": "Busca um personagem pelo ID",
-        "description": "Rota responsável por buscar um personagem pelo ID",
+        "summary": "Buscar um personagem pelo ID",
+        "description": "Rota responsável por buscar um personagem pelo ID.",
         "tags": ["Characters"],
         "parameters": [
           {
@@ -175,8 +176,8 @@
     },
     "/characters/create": {
       "post": {
-        "summary": "Cadastrar um personagem",
-        "description": "Rota responsável por cadastrar um personagem",
+        "summary": "Cadastrar um novo personagem",
+        "description": "Rota responsável por cadastrar um novo personagem na lista de personagens.",
         "tags": ["Characters"],
         "requestBody": {
           "content": {
@@ -215,7 +216,7 @@
     "/characters/update/{id}": {
       "put": {
         "summary": "Editar um personagem pelo ID",
-        "description": "Rota responsável por editar um personagem pelo ID",
+        "description": "Rota responsável por editar um personagem pelo ID.",
         "tags": ["Characters"],
         "parameters": [
           {
@@ -262,7 +263,7 @@
     "/characters/delete/{id}": {
       "delete": {
         "summary": "Apagar um personagem pelo ID",
-        "description": "Rota responsável por apagar um personagem pelo ID",
+        "description": "Rota responsável por apagar um personagem pelo ID.",
         "tags": ["Characters"],
         "parameters": [
           {
