@@ -2,11 +2,10 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Rick-and-Morty-API",
-    "description": "API para CRUD de personagens da serie animda Rick and Morty",
+    "description": "API para CRUD de personagens da serie animda Rick and Morty / Desenvolvido por Tainá Vilela e Gustavo Martins.",
     "termsOfService": "",
     "contact": {
-      "email": "gugumartin77@gmail.com",
-      "email2": "tainadantas89@gmail.com"
+      "email": "gugumartin77@gmail.com and tainadantas89@gmail.com"
     },
     "version": "1.0.0"
   },
