@@ -29,10 +29,10 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/users"
+                "$ref": "#/components/schemas/User"
               },
               "examples": {
-                "users": {
+                "User": {
                   "value": {
                     "name": "Test CreateUser",
                     "username": "TestCreateUser",
@@ -55,7 +55,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/users"
+                  "$ref": "#/components/schemas/User"
                 }
               }
             }
@@ -79,7 +79,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/users"
+                    "$ref": "#/components/schemas/User"
                   }
                 }
               }
@@ -97,10 +97,10 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/users"
+                "$ref": "#/components/schemas/User"
               },
               "examples": {
-                "users": {
+                "User": {
                   "value": {
                     "email": "TestUser@create.com",
                     "password": "12345"
@@ -115,15 +115,7 @@
             "description": "Bad Request"
           },
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/users"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -144,7 +136,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Characters"
+                    "$ref": "#/components/schemas/Character"
                   }
                 }
               }
@@ -176,7 +168,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/Characters"
+                  "$ref": "#/components/schemas/Character"
                 }
               }
             }
@@ -193,10 +185,10 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Characters"
+                "$ref": "#/components/schemas/Character"
               },
               "examples": {
-                "Characters": {
+                "Character": {
                   "value": {
                     "name": "Rick D. Sanchez III",
                     "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/283.jpeg"
@@ -241,10 +233,10 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Characters"
+                "$ref": "#/components/schemas/Character"
               },
               "examples": {
-                "Characters": {
+                "Character": {
                   "value": {
                     "name": "Rick Prime",
                     "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/285.jpeg"
@@ -264,7 +256,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "$ref": "#/components/schemas/Characters"
+                  "$ref": "#/components/schemas/Character"
                 }
               }
             }
