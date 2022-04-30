@@ -18,7 +18,7 @@ module.exports = async (req, res, next) => {
   const [scheme, token] = parts;
 
   if (!/^Bearer$/i.test(scheme)) {
-    return res.status(401).send({ message: 'Token malformatado!' });
+    return res.status(401).send({ message: 'Token mal formatado!' });
   }
 
   jwt.verify(token, process.env.SECRET, async (err, decoded) => {
