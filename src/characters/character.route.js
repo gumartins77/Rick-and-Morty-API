@@ -8,6 +8,8 @@ route.get(
   validId,
   controllerCharacters.findByIdCharactersController,
 );
+route.get('/search/:name', controllerCharacters.findByNameCharactersController);
+
 route.post(
   '/create',
   validObjectBody,

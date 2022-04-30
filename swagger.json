@@ -282,6 +282,36 @@
           }
         }
       }
+    },
+    "/characters/search/{name}": {
+      "get": {
+        "summary": "Buscar um personagem pelo nome",
+        "description": "Rota responsável por buscar um personagem pelo nome.",
+        "tags": ["Characters"],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Nome do personagem para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
