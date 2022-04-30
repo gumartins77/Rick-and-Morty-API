@@ -9,7 +9,7 @@ const findByIdCharactersService = async (idCharacter) => {
 };
 
 const findByNameCharactersService = async (nameCharacter) => {
-  return await Characters.find({ name: nameCharacter });
+  return await Characters.find({ name: { $regex: nameCharacter } });
 };
 
 const createCharacterService = async (newCharacter) => {
