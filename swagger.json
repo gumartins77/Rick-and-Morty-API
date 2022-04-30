@@ -38,7 +38,7 @@
                     "username": "TestCreateUser",
                     "email": "TestUser@create.com",
                     "password": "12345",
-                    "avatar": "TestCreateUser.jpg"
+                    "photo": "TestCreateUser.jpg"
                   }
                 }
               }
@@ -189,7 +189,7 @@
                 "Character": {
                   "value": {
                     "name": "Rick D. Sanchez III",
-                    "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/283.jpeg"
+                    "imageUrl": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/283.jpeg"
                   }
                 }
               }
@@ -236,7 +236,7 @@
                 "Character": {
                   "value": {
                     "name": "Rick Prime",
-                    "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/285.jpeg"
+                    "imageUrl": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/285.jpeg"
                   }
                 }
               }
