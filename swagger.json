@@ -11,12 +11,12 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3004/",
-      "description": "API de teste"
-    },
-    {
       "url": "https://rick-and-morty-api.onrender.com/",
       "description": "API de personagens de Rick and Morty online no Render"
+    },
+    {
+      "url": "http://localhost:3004/",
+      "description": "API de teste"
     }
   ],
   "paths": {
