@@ -16,12 +16,12 @@ The third project of the module consists of creating an API with a list to be co
 JavaScript; Node.JS; MongoDB Atlas; Mongoose; Express; Render Deploy, MVC; Git e GitHub.
 </p>
 
-### Personal: Gustavo Martins and Tainá Vilela
+### Personal: Gustavo Martins and Tainá Dantas
 
 ### Contact email from Gustavo Martins: <a href = "mailto:gugumartin77@gmail.com"> gugumartin77@gmail.com</a>
 
+### LinkedIn from Gustavo Martins: <a href = "https://www.linkedin.com/in/gustavo-martins-681921229/">gustavomartins.linkedin</a>
+
 ### Contact email from Tainá Vilela: <a href = "mailto:tainadantas89@gmail.com"> tainadantas89@gmail.com</a>
 
-### Linkdin from Gustavo Martins: <a href = "https://www.linkedin.com/in/gustavo-martins-681921229/">gustavomartins.linkdin</a>
-
-### Linkdin from Tainá Vilela: <a href = "https://www.linkedin.com/in/tain%C3%A1-dantas-vilela-barbosa-a214731b4/">tainádantas.linkdin</a>
+### LinkedIn from Tainá Vilela: <a href = "https://www.linkedin.com/in/tain%C3%A1-dantas-vilela-barbosa-a214731b4/">tainádantas.linkedin</a>
