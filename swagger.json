@@ -283,7 +283,7 @@
         }
       }
     },
-    "/characters/search/{name}": {
+    "/characters/search": {
       "get": {
         "summary": "Buscar um personagem pelo nome",
         "description": "Rota responsável por buscar um personagem pelo nome.",

@@ -1,27 +1,27 @@
 const Characters = require('./Character');
 
-const findAllCharactersService = async () => {
-  return await Characters.find();
+const findAllCharactersService = () => {
+  return Characters.find();
 };
 
-const findByIdCharactersService = async (idCharacter) => {
-  return await Characters.findById(idCharacter);
+const findByIdCharactersService = (idCharacter) => {
+  return Characters.findById(idCharacter);
 };
 
-const findByNameCharactersService = async (nameCharacter) => {
-  return await Characters.find({ name: { $regex: nameCharacter } });
+const findByNameCharactersService = (name) => {
+  return Characters.find({ name: { $regex: name, $options: "i" } });
 };
 
-const createCharacterService = async (newCharacter) => {
-  return await Characters.create(newCharacter);
+const createCharacterService = (newCharacter) => {
+  return Characters.create(newCharacter);
 };
 
-const updateCharacterService = async (idCharacter, editedCharacter) => {
-  return await Characters.findByIdAndUpdate(idCharacter, editedCharacter);
+const updateCharacterService = (idCharacter, editedCharacter) => {
+  return Characters.findByIdAndUpdate(idCharacter, editedCharacter);
 };
 
-const deleteCharacterService = async (idCharacter) => {
-  return await Characters.findByIdAndDelete(idCharacter);
+const deleteCharacterService = (idCharacter) => {
+  return Characters.findByIdAndDelete(idCharacter);
 };
 
 module.exports = {

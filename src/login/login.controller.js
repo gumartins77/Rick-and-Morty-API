@@ -19,7 +19,7 @@ const loginController = async (req, res) => {
 
   const token = loginService.generateToken(user.id);
 
-  res.send({ token });
+  res.status(201).send({ token });
 };
 
 module.exports = { loginController };

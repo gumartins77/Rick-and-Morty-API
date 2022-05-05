@@ -14,17 +14,18 @@ const findByIdCharactersController = async (req, res) => {
     req.params.id,
   );
   if (!chosenCharacter) {
-    return res.status(404).send({ message: 'Personagem não encontrado!' });
+    return res.status(400).send({ message: 'Personagem não encontrado!' });
   }
   res.send(chosenCharacter);
 };
 
 const findByNameCharactersController = async (req, res) => {
+  const { name } = req.query;
   const searchCharacter = await charactersService.findByNameCharactersService(
-    req.params.name,
+    name,
   );
-  if (!searchCharacter) {
-    return res.status(404).send({ message: 'Personagem não encontrado!' });
+  if (searchCharacter.length === 0) {
+    return res.status(400).send({ message: 'Personagem não encontrado!' });
   }
   res.send(searchCharacter);
 };
