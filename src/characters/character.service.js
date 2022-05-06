@@ -1,7 +1,14 @@
 const Characters = require('./Character');
 
-const findAllCharactersService = () => {
-  return Characters.find();
+const findAllCharactersService = (offset, limit) => {
+  return Characters.find()
+    .sort({ name: +1 })
+    .skip(offset)
+    .limit(limit);
+};
+
+const countCharacters = () => {
+  return Characters.countDocuments();
 };
 
 const findByIdCharactersService = (idCharacter) => {
@@ -9,7 +16,9 @@ const findByIdCharactersService = (idCharacter) => {
 };
 
 const findByNameCharactersService = (name) => {
-  return Characters.find({ name: { $regex: name, $options: "i" } });
+  return Characters.find({ name: { $regex: name, $options: 'i' } }).sort({
+    name: +1,
+  });
 };
 
 const createCharacterService = (newCharacter) => {
@@ -26,6 +35,7 @@ const deleteCharacterService = (idCharacter) => {
 
 module.exports = {
   findAllCharactersService,
+  countCharacters,
   findByIdCharactersService,
   findByNameCharactersService,
   createCharacterService,

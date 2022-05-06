@@ -2,11 +2,40 @@ const charactersService = require('./character.service');
 const mongoose = require('mongoose');
 
 const findAllCharactersController = async (req, res) => {
-  const allCharacters = await charactersService.findAllCharactersService();
+  let { offset, limit } = req.query;
+
+  offset = Number(offset);
+  limit = Number(limit);
+
+  if (!limit) {
+    limit = 0;
+  }
+
+  if (!offset) {
+    offset = 0;
+  }
+
+  const allCharacters = await charactersService.findAllCharactersService(
+    offset,
+    limit,
+  );
+
+  const total = await charactersService.countCharacters();
+
+  const currentUrl = req.baseUrl;
+
+  const next = offset + limit;
+  const nextUrl =
+    next < total ? `${currentUrl}$limit=${limit}&offset=${next}` : null;
+
+  const previous = offset - limit < 0 ? null : offset - limit;
+  const previousUrl =
+    previous != null ? `${currentUrl}?limit=${limit}&offset=${previous}` : null;
+
   if (allCharacters.length == 0) {
     return res.status(404).send({ message: 'Não há personagens registrados!' });
   }
-  res.send(allCharacters);
+  res.send({ nextUrl, previousUrl, limit, offset, total, allCharacters });
 };
 
 const findByIdCharactersController = async (req, res) => {
